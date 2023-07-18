@@ -1,13 +1,19 @@
-//sets up require express
+// packages
 const express = require("express");
-const api = require(".routes/index.js");
-const pathname = require("path");
+const apiRouter = require("./routes/api");
+const htmlRouter = require("./routes/html");
+
+// port 3001
+const PORT = process.env.PORT || 3001;
 const app = express();
-//port
-const port = process.env.port || 3001;
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express, express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
-//routes
-api.use("/api", api);
+app.use("/api", apiRouter);
+app.use("/", htmlRouter);
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
