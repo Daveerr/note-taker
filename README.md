@@ -2,19 +2,19 @@
 Link to site
 [https://the-note-taker1-2babe30b9d48.herokuapp.com/]
 
-#Description 
+Description 
   ### A simple note taker web application that allows users to write and save notes.
 
 
 
-  # Getting Started
+   Getting Started
   ### Clone the repository to your local machine. 
 ###  1. Install the required dependencies using npm install.
 ###  2. Start the server with the command node server.js.
 ###  3. Open your web browser and go to http://localhost:3001 to access the app.
 
 
-#Technologies Used
+ Technologies Used
 ### Express.js
 ### Node.js
 ### HTML
